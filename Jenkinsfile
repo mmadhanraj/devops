@@ -8,7 +8,7 @@ pipeline {
         stage("Checkout") 
         {
             steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'b0ef2e92-8dbf-4f4f-bc6f-a6865432a6a5', url: 'https://github.com/mmadhanraj/test-repo.git']])
+                git branch: 'main', url: 'git@github.com:mmadhanraj/sample.git'
             }
         }
         stage("Bulid") 
